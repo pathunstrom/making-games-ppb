@@ -1,0 +1,18 @@
+engine versus framework (should I even get into this?)
+3 minute demo
+event loops
+    * polling
+    * callbacks
+events
+    what do events look like?
+
+scenes
+    containers
+    responds to events
+    
+sprites/game objects
+
+assembling complex games
+    * Scene transitions
+    * event extensions
+    *
