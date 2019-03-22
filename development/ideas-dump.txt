@@ -9,10 +9,18 @@ events
 scenes
     containers
     responds to events
-    
+
 sprites/game objects
+    * position
+    * region
+    * EventMixin
+    * meta-data
+    * User defined data
 
 assembling complex games
     * Scene transitions
     * event extensions
-    *
+    * Sprite interaction
+        * using tags
+        * passing references
+        * message passing
