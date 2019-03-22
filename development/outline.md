@@ -9,11 +9,12 @@ Aim for 25 minutes
     1. Event Loops
     2. Rendering
     3. Game organization
-        1. Scenes
-        2. Sprites
+        1. The Engine
+            1. Scenes
+                1. Sprites
+            2. Subsystems
 3. Leveling Up - AKA what you need to do - 17 min
     1. Scene management
-        1. 
     2. Sprite coordination
         1. Using tags
         2. Using types
@@ -23,5 +24,6 @@ Aim for 25 minutes
         1. Creating events
         2. Extending events
     4. Building new subsystems ??
-    5. Cameras ??
+    5. Cameras
+        1. Subclassing
 4. Outro 1 min
