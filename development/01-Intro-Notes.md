@@ -1,0 +1,16 @@
+- Hi/Thanks/Welcome
+- Who am I?
+    - Piper Thunstrom
+    - Web developer
+    - Community organizer
+    - Web Developer
+- This Talk
+    - 201
+    - high level overview of game making
+    - detailed discussion of using ppb to make more complex games
+- What is ppb
+    - Open source
+    - pure python
+    - idiomatic python
+    - education focused
+    - The team
