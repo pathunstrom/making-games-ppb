@@ -1,0 +1,46 @@
+- Transition: 
+    - let's talk about the basics of game development
+    - all of this comes with ppb
+    - I feel context helps understanding
+- Event loops
+    - All games have at least one "infinite" loop
+    - other names
+        - render loops
+        - game loops
+        - simulation loops
+    - All names point to what's happening:
+        - note that the order is only moderately important
+        - render
+        - handle user input via events
+        - update the simulation based on time
+    - What are events
+        - Update
+        - Heartbeats
+        - key presses
+        - mouse motion
+    - Responding to events
+- Rendering
+    - Raster graphics
+    - Blitting
+    - How ppb does it
+        - image/resource
+        - rotation
+        - size
+- Organizing your game
+    - The engine
+        - run()
+        - contains
+            - scenes
+            - subsystems
+    - Subsystems
+        - pluggable features
+        - rendering
+        - hardware events
+    - Scenes
+        - what scenes are
+            - A piece of a game
+            - containers
+        - How the engine manages them
+    - Sprites
+        - data bags
+        - game objects
