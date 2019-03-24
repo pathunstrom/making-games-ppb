@@ -1,18 +1,3 @@
-3. Leveling Up - AKA what you need to do - 17 min
-    1. Scene management
-    2. Sprite coordination
-        1. Using tags
-        2. Using types
-        3. As parameters
-        4. Using the event system for messages
-    3. Extending the event system
-        1. Creating events
-        2. Extending events
-    4. Building new subsystems ??
-    5. Cameras
-        1. Subclassing
-
-
 - Transition
     - Enough about what ppb does for you. Let's talk about how to use this
       toolset.
