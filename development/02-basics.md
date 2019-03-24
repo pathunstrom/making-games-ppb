@@ -18,6 +18,7 @@
         - Heartbeats
         - key presses
         - mouse motion
+        - Message passing
     - Responding to events
 - Rendering
     - Raster graphics
@@ -32,6 +33,8 @@
         - contains
             - scenes
             - subsystems
+        - Publishes events
+        - Everything under the engine responds to events
     - Subsystems
         - pluggable features
         - rendering
@@ -43,4 +46,5 @@
         - How the engine manages them
     - Sprites
         - data bags
+        - Declarative
         - game objects
