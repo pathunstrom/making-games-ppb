@@ -10,7 +10,7 @@
     - detailed discussion of using ppb to make more complex games
 - What is ppb
     - Open source
-    - pure python
     - idiomatic python
+    - event driven
     - education focused
     - The team

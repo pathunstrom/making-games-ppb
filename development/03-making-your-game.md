@@ -4,7 +4,7 @@
 - Sprites
     - Behaviors
         - update pattern
-        - event handlers
+        - event handlers  
     - Coordination
         - Sprites can spawn other sprites.
             - pass one to another via parameter
