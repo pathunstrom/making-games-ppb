@@ -1,6 +1,29 @@
 - Transition
     - Enough about what ppb does for you. Let's talk about how to use this
       toolset.
+- Events
+    - Raising events
+        - `signal(my_event)`
+    - Creating new events
+        - Dataclasses!
+        - Just raise an instance of new class
+    - Extending classes
+        - `GameEngine.register(EventType, attribute_name, callable)`
+        - on publish
+            - Each attribute registered is called (without parameters)
+            - The return value is set on the event
+        - this can even be used to change default attributes (use caution!)
+- Scenes
+    - A stack
+    - Commands from existing scenes (or subsystems)
+        - StartScene - adds to the stack
+        - StopScene - pops from the stack
+        - ReplaceScene - pops, then adds to the stack
+    - Lifetime messages
+        - SceneStarted
+        - ScenePaused
+        - SceneContinued
+        - SceneStopped
 - Sprites
     - Behaviors
         - update pattern
@@ -21,28 +44,10 @@
     - Subclassing to add event handlers
     - Zoom?
     - Screen shake (Just kidding)
-- Scenes
-    - A stack
-    - Commands from existing scenes (or subsystems)
-        - StartScene - adds to the stack
-        - StopScene - pops from the stack
-        - ReplaceScene - pops, then adds to the stack
-    - Lifetime messages
-        - SceneStarted
-        - ScenePaused
-        - SceneContinued
-        - SceneStopped
-- Events
-    - Raising events
-        - `signal(my_event)`
-    - Creating new events
-        - Dataclasses!
-        - Just raise an instance of new class
-    - Extending classes
-        - `GameEngine.register(EventType, attribute_name, callable)`
-        - on publish
-            - Each attribute registered is called (without parameters)
-            - The return value is set on the event
-        - this can even be used to change default attributes (use caution!)
 - Subsystems
-    - ???
+    - How they work
+        - An idle event (/activate)
+    - What you can do with them
+        - Acheivement systems
+        - Scoring systems
+        - Save system

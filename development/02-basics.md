@@ -20,9 +20,12 @@
         - mouse motion
         - Message passing
     - Responding to events
+        - handler form
+        - parameters
 - Rendering
     - Raster graphics
-    - Blitting
+        - also called bitmap graphics
+        - 2d pixel array
     - How ppb does it
         - image/resource
         - rotation
