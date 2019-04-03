@@ -27,7 +27,8 @@
 - Sprites
     - Behaviors
         - update pattern
-        - event handlers  
+        - event handlers
+        - Add additional events to trigger decision trees or behavior trees
     - Coordination
         - Sprites can spawn other sprites.
             - pass one to another via parameter
