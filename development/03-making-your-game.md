@@ -47,7 +47,7 @@
     - Screen shake (Just kidding)
 - Subsystems
     - How they work
-        - An idle event (/activate)
+        - An idle event
     - What you can do with them
         - Acheivement systems
         - Scoring systems
