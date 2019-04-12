@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>ppb is</title>
+    <style>
+      body {
+        font-size: 32px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template: ". h ."
+                       ". b .";
+        align-content: center;
+        height: 100vh;
+      }
+
+      article {
+        grid-area: b;
+        justify-content: center;
+        display: grid;
+        height: 90vh;
+      }
+
+      header {
+        grid-area: h;
+        height: 10vh;
+      }
+      header > h1 {
+        margin-top: 10px;
+      }
+      .main_image {
+        width: auto;
+        height: auto;
+        max-height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <header>
+        <h1>PPB is</h1>
+      </header>
+      <article>
+        <img src="../resources/ppb-logo-2019.png" class="main_image">
+
+        <ul>
+          <li>
+            <p>Open Source</p>
+          </li>
+          <li>
+            <p>Idiomatic</p>
+          </li>
+          <li>
+            <p>Event Driven</p>
+          </li>
+          <li>
+            <p>Education Focused</p>
+          </li>
+        </ul>
+      </article>
+
+    </div>
+
+  </body>
+</html>
