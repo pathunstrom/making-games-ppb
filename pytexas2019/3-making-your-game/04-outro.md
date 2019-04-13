@@ -2,6 +2,10 @@
 
 # Make a game
 
+pursuedpybear.org
+
+ppb.readthedocs.io
+
     pip install ppb
 
 # Interact on twitter
@@ -12,6 +16,6 @@
 
 github.com/ppb
 
-* We need help with docs!
+* We need lots help with docs!
 * Lots of little issues
 * I'll help if you're new to FOSS
