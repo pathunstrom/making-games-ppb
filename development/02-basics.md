@@ -4,6 +4,7 @@
     - I feel context helps understanding
 - Event loops
     - All games have at least one "infinite" loop
+    - Note that the architecture is broken up to be testable.
     - other names
         - render loops
         - game loops
