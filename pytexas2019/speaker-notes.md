@@ -20,7 +20,6 @@
     - I feel context helps understanding
 - Event loops
     - All games have at least one "infinite" loop
-    - Note that the architecture is broken up to be testable.
     - other names
         - render loops
         - game loops
@@ -50,6 +49,7 @@
 - Organizing your game
     - The engine
         - run()
+        - Note that the architecture is broken up to be testable.
         - contains
             - scenes
             - subsystems
