@@ -5,7 +5,7 @@ import ppb
 
 class SplashScreen(ppb.BaseScene):
     continued = False
-    wait = 0.5
+    wait = 1
     background_color = (100, 50, 125)
 
     def on_update(self, update, signal):
@@ -20,7 +20,7 @@ class SplashScreen(ppb.BaseScene):
 
 
 class GameScreen(ppb.BaseScene):
-    wait = 0.5
+    wait = 1
     background_color = (50, 200, 40)
     start_time = None
 
@@ -39,7 +39,7 @@ class GameScreen(ppb.BaseScene):
 
 class GameOverScreen(ppb.BaseScene):
     background_color = (200, 50, 50)
-    wait = 0.5
+    wait = 1
 
     def on_update(self, event, signal):
         self.wait -= event.time_delta
