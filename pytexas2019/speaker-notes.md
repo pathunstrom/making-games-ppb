@@ -1,0 +1,124 @@
+- Hi/Thanks/Welcome
+- Who am I?
+    - Piper Thunstrom
+    - Web developer
+    - Community organizer
+    - Web Developer
+- This Talk
+    - 201
+    - high level overview of game making
+    - detailed discussion of using ppb to make more complex games
+- What is ppb
+    - Open source
+    - idiomatic python
+    - event driven
+    - education focused
+    - The team
+- Transition: 
+    - let's talk about the basics of game development
+    - all of this comes with ppb
+    - I feel context helps understanding
+- Event loops
+    - All games have at least one "infinite" loop
+    - Note that the architecture is broken up to be testable.
+    - other names
+        - render loops
+        - game loops
+        - simulation loops
+    - All names point to what's happening:
+        - note that the order is only moderately important
+        - render
+        - handle user input via events
+        - update the simulation based on time
+    - What are events
+        - Update
+        - Heartbeats
+        - key presses
+        - mouse motion
+        - Message passing
+    - Responding to events
+        - handler form
+        - parameters
+- Rendering
+    - Raster graphics
+        - also called bitmap graphics
+        - 2d pixel array
+    - How ppb does it
+        - image/resource
+        - rotation
+        - size
+- Organizing your game
+    - The engine
+        - run()
+        - contains
+            - scenes
+            - subsystems
+        - Publishes events
+        - Everything under the engine responds to events
+    - Subsystems
+        - pluggable features
+        - rendering
+        - hardware events
+    - Scenes
+        - what scenes are
+            - A piece of a game
+            - containers
+        - How the engine manages them
+    - Sprites
+        - data bags
+        - Declarative
+        - game objects
+- Transition
+    - Enough about what ppb does for you. Let's talk about how to use this
+      toolset.
+- Events
+    - Raising events
+        - `signal(my_event)`
+    - Creating new events
+        - Dataclasses!
+        - Just raise an instance of new class
+    - Extending classes
+        - `GameEngine.register(EventType, attribute_name, callable)`
+        - on publish
+            - Each attribute registered is called (without parameters)
+            - The return value is set on the event
+        - this can even be used to change default attributes (use caution!)
+- Scenes
+    - A stack
+    - Commands from existing scenes (or subsystems)
+        - StartScene - adds to the stack
+        - StopScene - pops from the stack
+        - ReplaceScene - pops, then adds to the stack
+    - Lifetime messages
+        - SceneStarted
+        - ScenePaused
+        - SceneContinued
+        - SceneStopped
+- Sprites
+    - Behaviors
+        - update pattern
+        - event handlers
+        - Add additional events to trigger decision trees or behavior trees
+    - Coordination
+        - Sprites can spawn other sprites.
+            - pass one to another via parameter
+        - Using types
+            - All events have the current scene attached
+            - `get(kind=type)`
+        - Using tags
+            - `scene.add(my_sprite, tags=["danger"])`
+            - `scene.get(tag="danger")`
+        - Using messaging
+            - Every handlers accepts a signal function
+            - `signal(my_event)`
+- The Camera
+    - Subclassing to add event handlers
+    - Zoom?
+    - Screen shake (Just kidding)
+- Subsystems
+    - How they work
+        - An idle event
+    - What you can do with them
+        - Acheivement systems
+        - Scoring systems
+        - Save system
