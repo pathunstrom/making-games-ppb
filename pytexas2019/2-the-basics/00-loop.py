@@ -8,3 +8,7 @@
 #     respond_to_events()
 #     update_simulation()
 #     render()
+
+import ppb
+
+ppb.run()

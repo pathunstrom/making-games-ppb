@@ -11,8 +11,10 @@ import ppb.keycodes as key
 
 
 class MyGameObject(ppb.BaseSprite):
-    pass
 
+    def on_key_pressed(self, event: event.KeyPressed, signal):
+        if event.key == key.Space:
+            self.size += 0.25
 
 def setup(scene):
     scene.add(MyGameObject())

@@ -12,11 +12,14 @@ class SplashScreen(ppb.BaseScene):
         self.wait -= update.time_delta
         if self.wait < 0:
             # StartScene: Let's start the game.
-            ...
+            signal(ppb.events.StartScene(GameScreen, kwargs={"bug": "fix"}))
 
     def on_scene_continued(self, event, signal):
         self.continued = True
         self.wait += 0.5
+
+    def on_scene_paused(self, event, signal):
+        print("Splash paused")
 
 
 class GameScreen(ppb.BaseScene):
@@ -31,7 +34,7 @@ class GameScreen(ppb.BaseScene):
         if self.start_time is not None and time.monotonic() - self.start_time >= self.wait:
             # ReplaceScene: And now, game's over.
             # Let's replace the game with the game over screen.
-            ...
+            signal(ppb.events.ReplaceScene(GameOverScreen, kwargs={"bug": "fix"}))
 
     def on_scene_stopped(self, event, signal):
         print(f"Game run time: {time.monotonic() - self.start_time}")
@@ -45,7 +48,7 @@ class GameOverScreen(ppb.BaseScene):
         self.wait -= event.time_delta
         if self.wait <= 0:
             # StopScene: This one is easy, we just need to stop it.
-            ...
+            signal(ppb.events.StopScene())
 
 
 with ppb.GameEngine(SplashScreen) as ge:

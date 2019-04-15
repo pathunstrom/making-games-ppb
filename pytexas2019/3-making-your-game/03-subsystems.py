@@ -63,13 +63,21 @@ class Game(ppb.BaseScene):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.add(Player())
-        self.add(AchievementStar())
     def on_update(self, event, signal):
         self.accumulator += event.time_delta
         if self.accumulator >= self.spawn_rate:
             self.add(Enemy())
             self.accumulator = 0
 
+class Achievement(ppb.systems.System):
+
+    def __init__(self, *args, **kwargs):
+        self.count = 0
+        self.goal = 10
+
+    def on_acheivement_progress(self, event, signal):
+        self.count += 1
+        if self.go
 with ppb.GameEngine(Game,
                     systems=[
                         ppb.systems.Updater,
